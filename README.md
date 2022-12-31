@@ -5,7 +5,8 @@ A module I made since I couldn't be bothered to remember the syntax of Rich Text
 ## How to use:
 
 So, say I wanted to make a pop-up showing how many gems I just collected, like this:
-![image]{}
+
+![image](https://user-images.githubusercontent.com/95715385/210150611-972c1928-6b3b-4c3e-a232-67dc11e9bec7.png)
 
 Here's a few ways to do it using this module.
 
