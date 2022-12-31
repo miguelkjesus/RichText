@@ -23,7 +23,6 @@ local ATTRIBUTE_TAGS = {
 }
 
 
-
 function RichTextFuncs:ToString()
     local text = self.BaseText
     
@@ -121,32 +120,32 @@ function RichTextFuncs:SetStrokeTransparency(transparency: number?)
 end
 
 function RichTextFuncs:SetBold(val: boolean?)
-    self.Bold = val or true
+    self.Bold = if val ~= nil then val else true
     return self
 end
 
 function RichTextFuncs:SetItalic(val: boolean?)
-    self.Italic = val or true
+    self.Italic = if val ~= nil then val else true
     return self
 end
 
 function RichTextFuncs:SetUnderline(val: boolean?)
-    self.Underline = val or true
+    self.Underline = if val ~= nil then val else true
     return self
 end
 
 function RichTextFuncs:SetStrikethrough(val: boolean?)
-    self.Strikethrough = val or true
+    self.Strikethrough = if val ~= nil then val else true
     return self
 end
 
 function RichTextFuncs:SetUppercase(val: boolean?)
-    self.Uppercase = val or true
+    self.Uppercase = if val ~= nil then val else true
     return self
 end
 
 function RichTextFuncs:SetSmallCaps(val: boolean?)
-    self.SmallCaps = val or true
+    self.SmallCaps = if val ~= nil then val else true
     return self
 end
 
