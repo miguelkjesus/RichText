@@ -2,6 +2,8 @@
 
 A module I made since I couldn't be bothered to remember the syntax of Rich Text, so I abstracted it into this.
 
+DevForum Post: https://devforum.roblox.com/t/simplerichtext-rich-text-abstracted/2093350
+
 ## How to use:
 
 So, say I wanted to make a pop-up showing how many gems I just collected, like this:
