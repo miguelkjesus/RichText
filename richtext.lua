@@ -24,7 +24,7 @@ local ATTRIBUTE_TAGS = {
 
 
 
-function RichTextFuncs:Compile()
+function RichTextFuncs:ToString()
     local text = self.BaseText
     
     for el_name, val in self do
@@ -60,6 +60,11 @@ function RichTextFuncs:Compile()
 end
 
 
+function RichTextFuncs:SetFont(fontSettings)
+    self.Font = fontSettings
+    return self
+end
+
 function RichTextFuncs:SetFontColor(color: Color3?)
     self.Font.Color = color
     return self
@@ -87,6 +92,11 @@ end
 
 function RichTextFuncs:SetFontTransparency(transparency: number?)
     self.Font.Transparency = transparency
+    return self
+end
+
+function RichTextFuncs:SetStroke(strokeSettings)
+    self.Stroke = strokeSettings
     return self
 end
 
@@ -182,7 +192,7 @@ function RichText.new(text: string?)
     
     return setmetatable(this, {
         __index = RichTextFuncs,
-        __tostring = RichTextFuncs.Compile
+        __tostring = RichTextFuncs.ToString
     })
 end
 
