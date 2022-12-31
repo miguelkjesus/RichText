@@ -104,3 +104,18 @@ RichText.new():SetFont{
 ```
 
 For the rest (`SetBold(...)`, `SetItalic(...)`, etc.), if the arguments are left blank, it will always default to `true`.
+
+ALSO, there are a few variables, namely the following:
+```lua
+RichText.LineBreak
+RichText.LessThan
+RichText.GreaterThan
+RichText.Quote
+RichText.Apostrophe
+RichText.Ampersand
+```
+These are all strings which output excatly what they say in rich text enabled text labels/buttons. These are useful since there can be trouble typing things like `'Hello <world>'` due to how rich text works. Therefore, you should do this instead:
+```lua
+text = 'Hello '..RichText.LessThan..'world'..RichText.GreaterThan
+```
+You could also abbreviate `RichText.LessThan` by doing `local lt = RichText.LessThan`, which I would reccomend for cleanliness.
